@@ -11,13 +11,13 @@ module.exports = {
         ADMIN_JWT_SECRET: process.env.ADMIN_JWT_SECRET || '6db6a03bc6340e6597f347dc8baf003144fed4ce1071399bc0b054fb8ae3deb5', // can be generated using the command: openssl rand -hex 32 
         JWT_SECRET: process.env.JWT_SECRET || '475c7df3f32486962ebba7a0138036ff9b0e4e12411c3e6e3b8a574a5ec3a3f8',  // can be generated using the command: openssl rand -hex 32 
         NODE_ENV: 'development',
-        DATABASE_HOST: 'xxxxxxxx', // database Endpoint under 'Connectivity & Security' tab
-        DATABASE_PORT: '5432',
-        DATABASE_NAME: 'strapi', // DB name under 'Configuration' tab
-        DATABASE_USERNAME: 'xxxxxx', // default username
-        DATABASE_PASSWORD: 'xxxxxx',
-        AWS_ACCESS_KEY_ID: 'xxxxxxxx',
-        AWS_ACCESS_SECRET: 'xxxxxxxx', 
+        DATABASE_HOST: process.env.DATABASE_HOST, // database Endpoint under 'Connectivity & Security' tab
+        DATABASE_PORT: process.env.DATABASE_PORT,
+        DATABASE_NAME: process.env.DATABASE_NAME, // DB name under 'Configuration' tab
+        DATABASE_USERNAME: process.env.DATABASE_USERNAME, // default username
+        DATABASE_PASSWORD:  process.env.DATABASE_PASSWORD,
+        AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
+        AWS_ACCESS_SECRET: process.env.AWS_ACCESS_SECRET, 
         AWS_REGION: 'us-east-1'
       },
     },
